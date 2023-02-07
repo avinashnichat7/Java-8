@@ -4,7 +4,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import com.stream.Employee;
@@ -45,12 +44,27 @@ public static void maxSalarybyEachDept() {
 
 	maxSalarybyEachDept.entrySet().forEach(s->System.out.println(s.getKey()+":"+s.getValue().get()));
 }
-public static void main(String[] args) {
+public static void secondHighSalaryBy1Dept() {
+
+	Employee employee = employeeDetails.stream()
+	.filter(e->e.getDept().equalsIgnoreCase("java"))
+	.sorted((o1, o2) ->o2.getSalary()-o1.getSalary() )
+	.skip(1)
+	.limit(1)
+	.findAny()
+	.get();
+	System.out.println(employee);
+	
+}
+	public static void main(String[] args) {
 //	groupByDept();	
 //	deptByNameEmployee();
 	//deptByEmployeeDetails();
-	maxSalarybyEachDept();
-	
+	//maxSalarybyEachDept();
+		secondHighSalaryBy1Dept();
 }
 	
+	
+	
+
 }
