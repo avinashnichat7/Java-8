@@ -1,9 +1,6 @@
 package synchronization;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 public class VectorTesting {
 
@@ -59,6 +56,7 @@ public class VectorTesting {
         System.out.println("multiThreaded list :.size() :: " + multiThreadedList.size());
 //
 //
+        Vector<Integer> stack = new Stack<Integer>();
         List<Integer> multiThreadedVector = new Vector<>();
 
         start = System.currentTimeMillis();

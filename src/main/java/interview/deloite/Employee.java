@@ -1,4 +1,4 @@
-package deloite;
+package interview.deloite;
 
 public class Employee {
 

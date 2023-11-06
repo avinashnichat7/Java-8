@@ -15,8 +15,8 @@ public class ReverseString {
         System.out.println(reverse);
         System.err.println("******************************************");
 
-
-        String reverseStringByword = Arrays.asList(str.split(""))
+        String[] split = str.split("");
+        String reverseStringByword = Arrays.asList(split)
                 .stream()
                 .map(x -> new StringBuilder(x).reverse())
                 .collect(Collectors.joining());
@@ -35,14 +35,16 @@ public class ReverseString {
         System.out.println(rev);
 
 
-        String name= "hello world";
+        String name = "hello world";
 
-        String collect = Arrays.asList(name.split(name))
-                .stream().map(x -> new StringBuilder(x).reverse())
-                .collect(Collectors.joining());
+        String collect = Arrays.asList(name.split(name)).stream().map(x -> new StringBuilder(x).reverse()).collect(Collectors.joining());
 
         System.out.println(collect);
 
+
+        String collect1 = Arrays.asList(name.split("")).stream()
+                .map(x -> new StringBuilder(x).reverse())
+                .collect(Collectors.joining());
 
     }
 }

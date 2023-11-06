@@ -1,6 +1,7 @@
 package string;
 
 public class CountVovels {
+
     public static void main(String[] args) {
 
         String name = "I live in India";

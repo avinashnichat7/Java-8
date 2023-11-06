@@ -1,6 +1,8 @@
 package arrays;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.stream.Stream;
 
 public class MergeArrays {
@@ -14,7 +16,7 @@ public class MergeArrays {
         System.out.println("***************************************");
 
 
-        int[] array1 = {1, 2};
+        int[] array1 = {5, 2};
         int[] array2 = {3, 4};
 
         int l1 = array1.length;
@@ -29,11 +31,13 @@ public class MergeArrays {
 
         System.out.println("Using Stream API");
 
+
         Stream<Integer> stream1 = Arrays.stream(array1).boxed();
 
         Stream<Integer> stream2 = Arrays.stream(array2).boxed();
 
         Integer[] integers = Stream.concat(stream1, stream2).toArray(Integer[]::new);
+        Arrays.sort(integers);
         System.out.println(Arrays.toString(integers));
 
     }
