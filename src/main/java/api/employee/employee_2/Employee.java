@@ -1,5 +1,7 @@
 package api.employee.employee_2;
 
+import java.util.ArrayList;
+
 public class Employee {
 
 	private int id;
@@ -50,6 +52,4 @@ public class Employee {
 		this.email = email;
 		this.department = department;
 	}
-	
-	
 }

@@ -10,10 +10,10 @@ public class EmpTest {
 	public static void main(String[] args) {
 		//hrDepartmentEmployeesName();
 	//	ageOfEmployeeGraterThan25();
-//			partionBy();
+			partionBy();
 		//	getByAge();
 		//	groupingBy();
-			getEmployeeByDept();
+//			getEmployeeByDept();
 			
 		//	maxAgeOfEachDept();
 			
@@ -57,8 +57,8 @@ public class EmpTest {
 		.collect(Collectors
 				.partitioningBy(e->e.getAge()>22,
 				     Collectors.toList()));
-	
-	System.out.println(collect);
+
+	System.out.println("partion"+ collect);
 	}
 	
 	public static void getByAge() {
