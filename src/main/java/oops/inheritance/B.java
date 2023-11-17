@@ -6,17 +6,17 @@ public class B extends A {
         A b2 = new B();
 
 //        b1.m1();
-//        b2.m1();
+        b2.m1();
 //        a.m1();
 //        b1.m2();
-//        b2.m2();
+        b2.m2();
 //        a.m2();
 
 
         A a = new A();
         B b = new B();
 //            a=b;
-        b = (B) a;
+//        b = (B) a;
 
 //        b.m2();
         b.m2();
