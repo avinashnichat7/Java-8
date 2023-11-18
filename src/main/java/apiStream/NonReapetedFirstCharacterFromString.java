@@ -8,7 +8,7 @@ public class NonReapetedFirstCharacterFromString {
 
     public static void main(String[] args) {
 
-        String input = "avinash";
+        String input = "avinassh";
 
 
         Character character = input.chars()
@@ -64,6 +64,16 @@ public class NonReapetedFirstCharacterFromString {
         Map.Entry<String, Long> nonRepeatedFirstCharacter = countOccance.entrySet().stream().filter(x -> x.getValue() == 1).findFirst().get();
 
         System.out.println("nonRepeatedFirstCharacter =" + nonRepeatedFirstCharacter);
+
+
+        String n= "avinash";
+        Character findfirst = n.chars().mapToObj(x -> (char) x)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream().sorted(Map.Entry.comparingByValue())
+                .map(x -> x.getKey()).findFirst().get();
+
+        System.err.println("find >" + findfirst);
+
     }
 
 

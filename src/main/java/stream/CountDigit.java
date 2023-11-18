@@ -1,4 +1,4 @@
-package com.stream;
+package stream;
 
 public class CountDigit {
 

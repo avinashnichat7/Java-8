@@ -23,7 +23,7 @@ public class Find_Longest_String_Given_Array {
                         .reversed())
                 .findFirst().get();
 
-        System.err.println("findFirstLongestString = "+ findFirstLongestString);
+        System.err.println("findFirstLongestString = " + findFirstLongestString);
 
 
         System.err.println("find the  whose start with 1");
@@ -38,6 +38,12 @@ public class Find_Longest_String_Given_Array {
                 .collect(Collectors.toList());
 
         System.out.println(strings);
+
+
+        List<String> list = Arrays.asList("spring", "spingboot", "microsoft", "microservices", "java");
+
+        List<String> sortBylength = list.stream().sorted((s1, s2) -> s1.length() - s2.length()).collect(Collectors.toList());
+        System.out.println("sortBylength" + sortBylength);
 
     }
 }

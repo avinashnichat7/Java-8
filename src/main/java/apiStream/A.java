@@ -30,6 +30,8 @@ public class A {
 		concat3(s3);
 		System.out.println(s3);
 
+		A c = new A();
+
 		// @oneToOne
 		// dif bet Post and Get
 		// java8

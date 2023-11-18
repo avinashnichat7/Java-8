@@ -1,4 +1,4 @@
-package com.stream.practice;
+package stream.practice;
 
 public class RemoveSpecialCharacterInGIvenString {
 
