@@ -1,9 +1,6 @@
 package interview.deloite;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MainEmployee {
@@ -40,7 +37,6 @@ public class MainEmployee {
                 .sorted(Comparator.comparing(Employee::getName)
                         .thenComparing(Comparator.comparing(Employee::getSalary).reversed()))
                 .collect(Collectors.toList());
-
         System.out.println(sortByNameAndSalary);
     }
 }

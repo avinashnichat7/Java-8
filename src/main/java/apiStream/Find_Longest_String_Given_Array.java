@@ -25,6 +25,13 @@ public class Find_Longest_String_Given_Array {
 
         System.err.println("findFirstLongestString = " + findFirstLongestString);
 
+        String findSecondLargestString = Arrays.stream(array)
+                .sorted(Comparator.comparing(String::length).reversed())
+                .skip(1)
+                .limit(1)
+                .findFirst().get();
+        System.out.println("findSecondLargestString"+ findSecondLargestString);
+
 
         System.err.println("find the  whose start with 1");
 
@@ -33,7 +40,7 @@ public class Find_Longest_String_Given_Array {
 
 
         List<String> strings = Arrays.stream(n)
-                .boxed().map(x -> x + "")
+                .boxed().map(x->String.valueOf(x))
                 .filter(x -> x.startsWith("1"))
                 .collect(Collectors.toList());
 
@@ -44,6 +51,12 @@ public class Find_Longest_String_Given_Array {
 
         List<String> sortBylength = list.stream().sorted((s1, s2) -> s1.length() - s2.length()).collect(Collectors.toList());
         System.out.println("sortBylength" + sortBylength);
+
+        String findLongStringFromList = list.stream()
+                .reduce((x1, x2) -> x1.length() > x2.length() ? x1 : x2)
+                .get();
+
+        System.out.println(findLongStringFromList);
 
     }
 }
